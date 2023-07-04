@@ -2,7 +2,8 @@
   "extends": [
     "airbnb-base",
     "airbnb-typescript/base",
-    "plugin:@typescript-eslint/recommended"
+    "plugin:@typescript-eslint/recommended",
+    "plugin:i18next/recommended"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -10,7 +11,8 @@
   },
   "plugins": [
     "prettier",
-    "@typescript-eslint"
+    "@typescript-eslint",
+    "i18next"
   ],
   "root": true,
   "rules": {
@@ -41,12 +43,12 @@
       }
     ],
     "import/prefer-default-export": "off",
-    //    "max-lines": ["error", { "max": 100 }],
     "max-len": "off",
     "no-underscore-dangle": "off",
     "@typescript-eslint/naming-convention": "off",
     "import/no-extraneous-dependencies": "off",
-    "no-unused-vars": "warn"
+    "no-unused-vars": "warn",
+    "i18next/no-literal-string": ["error", {"markupOnly": true}]
   },
   "settings": {
     "import/core-modules": [
