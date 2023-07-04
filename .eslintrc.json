@@ -1,0 +1,66 @@
+{
+  "extends": [
+    "airbnb-base",
+    "airbnb-typescript/base",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "plugins": [
+    "prettier",
+    "@typescript-eslint"
+  ],
+  "root": true,
+  "rules": {
+    "@typescript-eslint/ban-types": [
+      "error",
+      {
+        "types": {
+          "{}": false
+        }
+      }
+    ],
+    "no-duplicate-imports": [
+      "error"
+    ],
+    "arrow-body-style": [
+      "error",
+      "as-needed"
+    ],
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never",
+        "mjs": "never"
+      }
+    ],
+    "import/prefer-default-export": "off",
+    //    "max-lines": ["error", { "max": 100 }],
+    "max-len": "off",
+    "no-underscore-dangle": "off",
+    "@typescript-eslint/naming-convention": "off",
+    "import/no-extraneous-dependencies": "off",
+    "no-unused-vars": "warn"
+  },
+  "settings": {
+    "import/core-modules": [
+      "dayjs"
+    ],
+    "import/resolver": {
+      "node": {
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx"
+        ]
+      }
+    }
+  }
+}
