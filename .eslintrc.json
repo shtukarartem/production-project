@@ -11,15 +11,20 @@
     "plugin:i18next/recommended"
   ],
   "parser": "@typescript-eslint/parser",
-  "parserOptions": {
-    "project": "./tsconfig.json"
-  },
   "plugins": [
     "prettier",
     "@typescript-eslint",
     "i18next"
   ],
   "root": true,
+  "overrides": [
+    {
+      "files":["**/src/**/*.test.{ts,tsx}"],
+      "rules": {
+        "i18next/no-literal-string": "off"
+      }
+    }
+  ],
   "rules": {
     "@typescript-eslint/ban-types": [
       "error",
@@ -53,7 +58,7 @@
     "@typescript-eslint/naming-convention": "off",
     "import/no-extraneous-dependencies": "off",
     "no-unused-vars": "warn",
-    "i18next/no-literal-string": ["error", {"markupOnly": true}]
+    "i18next/no-literal-string": ["error", {"markupOnly": true,  "ignoreAttribute": ["data-testid", "to"] }]
   },
   "settings": {
     "import/core-modules": [
