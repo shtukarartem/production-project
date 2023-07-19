@@ -4,14 +4,14 @@ import { Sidebar } from 'widgets/Sidebar';
 
 describe('SideBar', () => {
   test('with only first param', () => {
-    renderWithoutTranslation(<Sidebar />)
+    renderWithoutTranslation(<Sidebar />);
     expect(screen.getByTestId('sidebar')).toBeInTheDocument();
   });
   test('with only first param', () => {
-    renderWithoutTranslation(<Sidebar />)
+    renderWithoutTranslation(<Sidebar />);
     const toggleBtn = screen.getByTestId('sidebar-toggle');
     expect(screen.getByTestId('sidebar')).toBeInTheDocument();
-    fireEvent.click(toggleBtn)
-    expect(screen.getByTestId('sidebar')).toHaveClass('collapsed')
+    fireEvent.click(toggleBtn);
+    expect(screen.getByTestId('sidebar')).toHaveClass('collapsed');
   });
 });
