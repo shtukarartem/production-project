@@ -3,3 +3,4 @@ webpack.config.ts
 /**/node_modules/*
 node_modules/
 /node_modules
+index.js
