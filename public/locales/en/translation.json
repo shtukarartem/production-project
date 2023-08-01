@@ -7,5 +7,7 @@
   "Короткий язык": "En",
   "Войти": "LogIn",
   "increment": "increment",
-  "decrement": "decrement"
+  "decrement": "decrement",
+  "Введите username": "Input username",
+  "Введите пароль": "Input password"
 }
